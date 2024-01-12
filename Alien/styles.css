@@ -1,0 +1,97 @@
+/* RESET CSS */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  /* Centralizar o desenho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+
+ }
+
+.gradient-background{
+  background: linear-gradient(100deg,#200c32, #5e0159 ,#febaa6);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+  }
+
+  div {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.container{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(100deg,lime, lime ,darkviolet);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+  border-radius: 50% 50% 50% 15%;
+  width: 300px;
+  height: 300px;
+
+  transform: rotate(-45deg);
+  outline: 8px solid white;
+}
+
+.face{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  transform: rotate(45deg) translateY(25%);
+}
+
+.eyes{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.eyes>div{
+  background: linear-gradient(100deg,black, rgb(85, 85, 85) ,black);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+  width: 120px;
+  height: 120px;
+  border-radius: 5% 100%;
+  transform: rotateZ(-7deg);
+}
+
+.eyes>div:last-child{
+  transform: rotateX(180deg) rotateZ(-7deg);
+}
+
+.smile{
+  border: none;
+  border-bottom: 15px solid;
+  width: 50px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top:5%;
+}
+
